@@ -1,0 +1,13 @@
+.week1-container{
+  cursor: pointer;
+  user-select: none;
+  /* 더블 클릭 선택 방지: https://mylife365.tistory.com/22 */
+}
+
+.dropdown{
+  padding-left: 0.5rem;
+}
+
+.dropdown-week{
+  padding-bottom: 0.5rem;
+}
