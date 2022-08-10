@@ -6,7 +6,7 @@ export const PrimaryButton = styled.div`
   align-items: center;
   background-color: ${(props) => props.backgroundcolor || "#228be6" };
   color: ${(props) => props.color || "white"};
-  height: 54px;
+  height: ${(props) => props.height || "54px"};
   font-size: ${(props) => props.fontsize || "20px"};
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 0.5rem;
