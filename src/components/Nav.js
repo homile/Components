@@ -12,6 +12,9 @@ const Nav = () => {
         <PrimaryButton>Nav 드롭다운 컴포넌트</PrimaryButton>
       </Link>
       <Link to="/week2">
+        <PrimaryButton>아코디언 컴포넌트</PrimaryButton>
+      </Link>
+      <Link to="/week3">
         <PrimaryButton>케러샐 컴포넌트</PrimaryButton>
       </Link>
       {pathname !== "/" && (

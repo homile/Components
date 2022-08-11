@@ -6,6 +6,7 @@ import Nav from "./components/Nav";
 import Main from "./pages/Main";
 import Week1 from "./pages/Week1";
 import Week2 from "./pages/Week2";
+import Week3 from "./pages/Week3";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<Main />}></Route>
             <Route path="/Week1" element={<Week1 />}></Route>
             <Route path="/Week2" element={<Week2 />}></Route>
+            <Route path="/Week3" element={<Week3 />}></Route>
           </Routes>
         </Container>
       </BrowserRouter>
