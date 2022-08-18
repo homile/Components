@@ -12,31 +12,44 @@ const Week3 = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slideRef = useRef(null);
 
-  const prevSlideHandler = (() => {
-    currentSlide === 0 ?setCurrentSlide(TOTAL_SLIDES) : setCurrentSlide(currentSlide-1);
-    console.log(currentSlide)
-  });
+  const prevSlideHandler = () => {
+    currentSlide === 0
+      ? setCurrentSlide(TOTAL_SLIDES)
+      : setCurrentSlide(currentSlide - 1);
+    console.log(currentSlide);
+  };
 
-  const nextSlideHandler = (() => {
-    currentSlide >= TOTAL_SLIDES ?setCurrentSlide(0) : setCurrentSlide(currentSlide+1);
-    console.log(currentSlide)
-  });
+  const nextSlideHandler = () => {
+    currentSlide >= TOTAL_SLIDES
+      ? setCurrentSlide(0)
+      : setCurrentSlide(currentSlide + 1);
+    console.log(currentSlide);
+  };
 
-  useEffect(()=> {
-    slideRef.current.style.transition = 'all 0.5s ease-in-out';
+  useEffect(() => {
+    slideRef.current.style.transition = "all 0.5s ease-in-out";
     slideRef.current.style.transform = `translateX(-${currentSlide}00%`;
-  }, [currentSlide])
+  }, [currentSlide]);
 
   return (
     <>
       <Container>
         <CarouselContainer ref={slideRef}>
-          <Slide img={process.env.PUBLIC_URL + "/img1.jpeg"}/>
-          <Slide img={process.env.PUBLIC_URL + "/img2.jpeg"}/>
+          <div>
+            <Slide img={process.env.PUBLIC_URL + "/img1.jpeg"} />
+          </div>
+          <div>
+            <Slide img={process.env.PUBLIC_URL + "/img2.jpeg"} />
+          </div>
         </CarouselContainer>
         <ButtonContainer>
-          <PrimaryButton height="2rem" onClick={prevSlideHandler}> <i className="fa-solid fa-caret-left"/></PrimaryButton>
-          <PrimaryButton height="2rem" onClick={nextSlideHandler}><i className="fa-solid fa-caret-right"/></PrimaryButton>
+          <PrimaryButton height="2rem" onClick={prevSlideHandler}>
+            {" "}
+            <i className="fa-solid fa-caret-left" />
+          </PrimaryButton>
+          <PrimaryButton height="2rem" onClick={nextSlideHandler}>
+            <i className="fa-solid fa-caret-right" />
+          </PrimaryButton>
         </ButtonContainer>
       </Container>
     </>
@@ -51,7 +64,7 @@ const CarouselContainer = styled.div`
   width: 400px;
   height: 400px;
   /* 선을 넘어간 이미지들을 숨겨준다. */
-  overflow: hidden;
+  /* overflow: hidden; */
 `;
 
 const ButtonContainer = styled.div`

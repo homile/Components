@@ -27,10 +27,11 @@ const list = [
 const Week2 = () => {
   const [select, setSelect] = useState(false);
   const [locateY, setLocateY] = useState(0);
+  const [browserHeight, setBrowserHeight] = useState(window.outerHeight/2);
 
   const clicked = (idx, e) => {
     setSelect(idx);
-    window.scroll({ top: e.pageY - 450, behavior: "smooth" });
+    window.scroll({ top: e.pageY-350, behavior: "smooth" });
     setLocateY(e.pageY)
     if (select === idx) {
       setSelect(false);
@@ -39,13 +40,32 @@ const Week2 = () => {
 
   const arrowUpHandler = () => {
     if(locateY === 0){
-      window.scroll({ top: 1400, behavior: "smooth" });
+      window.scroll({ top: 1000, behavior: "smooth" });
       setLocateY(1400)
     }else{
       window.scroll({ top: 0, behavior: "smooth" });
       setLocateY(0)
     }
-  }
+  };
+
+  // const [ScrollY, setScrollY] = useState(0);  // 스크롤값을 저장하기 위한 상태
+  // const handleFollow = () => {
+  //   setScrollY(window.pageYOffset); // window 스크롤 값을 ScrollY에 저장
+  // }
+
+  // useEffect(() => {
+  //   console.log("ScrollY is ", ScrollY); // ScrollY가 변화할때마다 값을 콘솔에 출력
+  // }, [ScrollY])
+
+  // useEffect(() => {
+  //   const watch = () => {
+  //     window.addEventListener('scroll', handleFollow);
+  //   }
+  //   watch(); // addEventListener 함수를 실행
+  //   return () => {
+  //     window.removeEventListener('scroll', handleFollow); // addEventListener 함수를 삭제
+  //   }
+  // })
 
   return (
     <Container>
