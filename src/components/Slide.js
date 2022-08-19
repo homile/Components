@@ -12,6 +12,6 @@ const Slide = ({ img }) => {
 export default Slide;
 
 const Img = styled.img`
-  width: 500px;
+  width: 400px;
   height: 400px;
 `;
