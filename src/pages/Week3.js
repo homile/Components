@@ -5,7 +5,7 @@ import { useState } from "react";
 import { PrimaryButton } from "../components/button";
 import Slide from "../components/Slide";
 
-const TOTAL_SLIDES = 2; // 전체 슬라이드 수(인덱스 번호)
+const TOTAL_SLIDES = 3; // 전체 슬라이드 수(인덱스 번호)
 
 const Week3 = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -60,6 +60,9 @@ const Week3 = () => {
           </div>
           <div>
             <Slide img={process.env.PUBLIC_URL + "/img1.jpeg"} />
+          </div>
+          <div>
+            <Slide img={process.env.PUBLIC_URL + "/img3.jpeg"} />
           </div>
         </CarouselContainer>
         <ButtonContainer>

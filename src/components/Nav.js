@@ -9,13 +9,16 @@ const Nav = () => {
   return (
     <MainNav>
       <Link to="/week1">
-        <PrimaryButton>Nav 드롭다운 컴포넌트</PrimaryButton>
+        <PrimaryButton>Nav 드롭다운</PrimaryButton>
       </Link>
       <Link to="/week2">
-        <PrimaryButton>아코디언 컴포넌트</PrimaryButton>
+        <PrimaryButton>아코디언</PrimaryButton>
       </Link>
       <Link to="/week3">
-        <PrimaryButton>케러샐 컴포넌트</PrimaryButton>
+        <PrimaryButton>케러샐</PrimaryButton>
+      </Link>
+      <Link to="/week4">
+        <PrimaryButton>회원가입</PrimaryButton>
       </Link>
       {pathname !== "/" && (
         <Link to="/">
